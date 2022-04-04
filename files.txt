@@ -1,0 +1,26 @@
+﻿#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+   ofstream f;
+    f.open("input.txt");
+    string str;
+    while (getline(cin, str)) {
+        if (str == "") break;
+        f << str << '\n';
+    }
+    f.close();
+
+    ifstream fin("input.txt");
+    if (fin.is_open()) {
+        string w;
+        while(getline(fin, w))
+        cout << w << endl;
+    }
+    else cout << "can't open file";
+    fin.close();
+    return 0;
+}

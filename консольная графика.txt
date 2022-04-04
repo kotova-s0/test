@@ -1,0 +1,35 @@
+package com.company;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Enter word: ");
+        Scanner s = new Scanner(System.in);
+        String word = s.nextLine();
+        String[] h = {"#   # ", "#   # ", "##### ", "#   # ", "#   # "};
+        String[] e = {"##### ", "#     ", "###   ", "#     ", "##### "};
+        String[] l = {"#     ", "#     ", "#     ", "#     ", "##### "};
+        String[] o = {"##### ", "#   # ", "#   # ", "#   # ", "##### "};
+        String[] w = {"#   # ", "#   # ", "# # # ", " # #  ", " # #  "};
+        String[] r = {"##### ", "#   # ", "##### ", "# #   ", "#  ## "};
+        String[] d = {"####  ", "#   # ", "#   # ", "#   # ", "####  "};
+        String empty = "      ";
+        for (int j = 0; j < 5; j++) {
+            for (int i = 0; i < word.length(); i++) {
+                char letter = word.charAt(i);
+                if (letter == 'h')  System.out.print(h[j]);
+                if (letter == 'e')  System.out.print(e[j]);
+                if (letter == 'l')  System.out.print(l[j]);
+                if (letter == 'o')  System.out.print(o[j]);
+                if (letter == 'w')  System.out.print(w[j]);
+                if (letter == 'r')  System.out.print(r[j]);
+                if (letter == 'd')  System.out.print(d[j]);
+                if (letter == ' ')  System.out.print(empty);
+            }
+            System.out.println();
+        }
+    }
+}
